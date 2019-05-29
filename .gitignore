@@ -1,0 +1,13 @@
+images/*
+*.pyc
+/.vscode/*
+.vscode/*
+/.vscode
+credentials.py
+config.py
+zappa_env3/*
+*.tar.gz
+zappa_settings.json
+local_config.json
+Zappa
+aws_env.env
