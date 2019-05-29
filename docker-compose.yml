@@ -1,0 +1,15 @@
+version: '3'
+services:
+  connexion-service:
+    image: connexion-service-image
+    working_dir: /usr/app
+    build: .
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/usr/app/
+      - /usr/app/zappa_env3/
+    env_file:
+      - aws_env.env
+    command: python app.py
