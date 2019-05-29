@@ -1,0 +1,65 @@
+openapi: 3.0.0
+servers:
+  - url: https://hxypd7rwx9.execute-api.us-east-1.amazonaws.com/development
+    description: Test Server (uses test data)
+  - url: http://192.168.99.100:8080
+    description: Local Server for Windows docker (uses test data)
+  - url: http://localhost.com:8080
+    description: Local Server (uses test data)
+info:
+  version: "1.0.0"
+  title: Connexion Example API
+  description: >-
+    Example API using Connexion and openapi: 3.0.0
+  contact:
+    name: Pedro Torres
+    url: https://www.pedro-torres.com
+paths:
+  /hello-world:
+    get:
+      operationId: api.get_hello_world
+      # tags:
+      #   - Examples
+      summary: Get example
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+    post:
+      operationId: api.post_hello_world
+      # tags:
+      #   - Examples
+      summary: Post example
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                input:
+                  type: string
+              required:
+                - input
+        required: true
+
+
+# tags:
+#   - name: Examples
+#     description: Example paths
+              
