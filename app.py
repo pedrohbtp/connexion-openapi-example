@@ -9,4 +9,4 @@ connexion_app.add_api('openapi.yaml', validate_responses=True)
 CORS(connexion_app.app)
 
 if __name__ == '__main__':
-    connexion_app.run(host='0.0.0.0', port=8080)
+    connexion_app.run(debug=True, host='0.0.0.0', port=8080)
